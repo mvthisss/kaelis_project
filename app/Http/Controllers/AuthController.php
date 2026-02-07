@@ -16,7 +16,7 @@ class AuthController extends Controller
         return view('auth.register');
     }
     
-    public function Inscrire(Request $request): RedirectResponse
+    public function register(Request $request): RedirectResponse
     {
         // Validation des données
        $validated = $request->validate([
@@ -71,7 +71,7 @@ class AuthController extends Controller
         if (Auth::attempt($validated, $request->boolean('remember'))) {
             $request->session()->regenerate();
 
-            return redirect()->intended(route('trips.index'))
+            return redirect()->intended(route('acceuil.index'))
                 ->with('success', 'Vous êtes connecté.');
         }
 

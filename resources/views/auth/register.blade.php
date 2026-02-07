@@ -1,14 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    bonjour tt le monde
-    <h2>INSCRIPTION</h2>
-    <div>
+@extends('layouts.app')
+
+@section('title', 'Inscription')
+
+@section('content')
+
+    <form action="{{ route('register') }}" method="POST" class="space-y-4">
+        @csrf
         <label for="nom">Nom</label>
         <input type="text" id="nom" name="nom">
     </div>
@@ -54,5 +51,4 @@
         <input type="password" id="password_confirmation" name="password_confirmation">
     </div>
     <button type="submit">S'inscrire</button>
-</body>
-</html>
+</form>
