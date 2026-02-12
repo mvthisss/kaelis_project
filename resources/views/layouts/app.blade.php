@@ -112,7 +112,7 @@
 
     <nav>
         @auth
-            <a href="{{ route('trips.index') }}">Accueil</a>
+            <a href="{{ route('acceuil.index') }}">Accueil</a>
             <a href="#">Profil</a>
             <a href="#">Déconnexion</a>
         @else

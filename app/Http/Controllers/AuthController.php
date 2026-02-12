@@ -58,6 +58,14 @@ class AuthController extends Controller
 
 
     //methode pour la connexion
+
+
+    public function showLoginForm()
+    {
+        return view('auth.login');
+    }
+
+    
     public function login(Request $request): RedirectResponse
     {
         $validated = $request->validate([
